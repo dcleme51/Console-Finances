@@ -86,3 +86,45 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+// Need a Variabe amount months in the data set finances(86) 
+var totalMonths= finances.length;
+
+// Variable to hold total profit and loss
+var totalProfitAndLoss= 0
+
+//Average of the changes 
+var changesPerMonth = 0
+
+// Variable to hold the change between 1 and 2nd month (Total/(Number of months - 1))
+var average;
+
+// Var greatestIncrease
+var greatestIncrease
+
+// Var greatestDecrease
+var greatestDecrease
+
+// Add changes month over month for entire array
+var netChangeSum=0
+
+// How do you round by 100 in JavaScript?
+//var rounded = Math. round(number * 100)
+
+for (let i = 0; i < finances.length; i++) {
+  const element = finances[i];
+  
+};
+
+console.log(element)
+
+// Financial Analysis 
+// ----------------
+// Total Months: 86
+// Total: $38382578
+// Average Change: -2315.12
+// Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
+// Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
+
+console.log(totalMonths);
