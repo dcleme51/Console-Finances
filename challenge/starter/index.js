@@ -112,12 +112,14 @@ var netChangeSum=0
 // How do you round by 100 in JavaScript?
 //var rounded = Math. round(number * 100)
 
+
 for (let i = 0; i < finances.length; i++) {
-  const element = finances[i];
-  
+ var profitAndLoss = finances[i][1]
+  // console.log(profitAndLoss);
+totalProfitAndLoss = profitAndLoss + totalProfitAndLoss
+console.log(totalProfitAndLoss)
 };
 
-console.log(element)
 
 // Financial Analysis 
 // ----------------
