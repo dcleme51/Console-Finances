@@ -89,54 +89,62 @@ var finances = [
 
 
 // Need a Variabe amount months in the data set finances(86) 
-var totalMonths= finances.length;
+var totalMonths = finances.length;
 
 // Variable to hold total profit and loss
-var totalProfitAndLoss= 0
+var totalProfitAndLoss = 0
 
 //Average of the changes 
 var changesPerMonth = 0
 
 // Var greatestIncrease
 var greatestIncrease = 0
-var increaseMonth =""
+var increaseMonth = ""
 // Var greatestDecrease
 var greatestDecrease = 0
-var decreaseMonth =""
+var decreaseMonth = ""
 // Add changes month over month for entire array
 var netChangeSum = 0
 
-// How do you round by 100 in JavaScript?
-//var rounded = Math. round(number * 100)
 
-
+// Use for loop to determaine the profit and loss and total months
 for (let i = 0; i < finances.length; i++) {
- var profitAndLoss = finances[i][1]
+  var profitAndLoss = finances[i][1]
   // console.log(profitAndLoss);
-totalProfitAndLoss = profitAndLoss + totalProfitAndLoss
-if(i+1 < finances.length){
-  changesPerMonth = finances[i][1]-finances[i+1][1]
-  netChangeSum += changesPerMonth
-  if(changesPerMonth < greatestIncrease){
-    greatestIncrease = changesPerMonth 
-    increaseMonth = finances[i+1][0];
-  };
-  if(changesPerMonth > greatestDecrease){
-    greatestDecrease = changesPerMonth 
-    decreaseMonth = finances[i+1][0];
-  };
-}
+  //Calculating the total, increase and decrease of P/L using the If statements.
+  totalProfitAndLoss = profitAndLoss + totalProfitAndLoss
+  if (i + 1 < finances.length) {
+    changesPerMonth = finances[i][1] - finances[i + 1][1]
+    netChangeSum += changesPerMonth;
+    if (changesPerMonth < greatestIncrease) {
+      greatestIncrease = changesPerMonth;
+      increaseMonth = finances[i + 1][0];
+    };
+    if (changesPerMonth > greatestDecrease) {
+      greatestDecrease = changesPerMonth;
+      decreaseMonth = finances[i + 1][0];
+    };
+  }
 };
+
+// Console logging the anwsers to meet the dervied outcomes. 
+
 console.log("Finacial Analyisis");
 console.log(totalMonths);
 console.log("Total $" + totalProfitAndLoss);
-console.log("Greatest Increase in P/L:" + increaseMonth +" ($"+ (greatestIncrease*-1) +")")
-console.log(`Greatest decrease in P/L: ${decreaseMonth} ($${greatestDecrease*-1})`)
-// Variable to hold the change between 1 and 2nd month (Total/(Number of months - 1))
-var average = netChangeSum/(totalMonths - 1)
 
-console.log("Average Change: "+ average*-1)
+// use operators to calculate th average change 
+var average = netChangeSum / (totalMonths - 1);
+// Make the average to 2 decimal places using the toFixed function.
+var newAvarage = average.toFixed(2) * -1;
+console.log("Average Change: " + newAvarage);
 
+console.log("Greatest Increase in P/L:" + increaseMonth + " ($" + (greatestIncrease * -1) + ")");
+
+console.log(`Greatest decrease in P/L: ${decreaseMonth} ($${greatestDecrease * -1})`);
+
+
+//Expected outcomes
 
 // Financial Analysis 
 // ----------------
