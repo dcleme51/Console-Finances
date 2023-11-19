@@ -97,17 +97,14 @@ var totalProfitAndLoss= 0
 //Average of the changes 
 var changesPerMonth = 0
 
-// Variable to hold the change between 1 and 2nd month (Total/(Number of months - 1))
-var average;
-
 // Var greatestIncrease
-var greatestIncrease
-
+var greatestIncrease = 0
+var increaseMonth =""
 // Var greatestDecrease
-var greatestDecrease
-
+var greatestDecrease = 0
+var decreaseMonth =""
 // Add changes month over month for entire array
-var netChangeSum=0
+var netChangeSum = 0
 
 // How do you round by 100 in JavaScript?
 //var rounded = Math. round(number * 100)
@@ -117,8 +114,28 @@ for (let i = 0; i < finances.length; i++) {
  var profitAndLoss = finances[i][1]
   // console.log(profitAndLoss);
 totalProfitAndLoss = profitAndLoss + totalProfitAndLoss
-console.log(totalProfitAndLoss)
+if(i+1 < finances.length){
+  changesPerMonth = finances[i][1]-finances[i+1][1]
+  netChangeSum += changesPerMonth
+  if(changesPerMonth < greatestIncrease){
+    greatestIncrease = changesPerMonth 
+    increaseMonth = finances[i+1][0];
+  };
+  if(changesPerMonth > greatestDecrease){
+    greatestDecrease = changesPerMonth 
+    decreaseMonth = finances[i+1][0];
+  };
+}
 };
+console.log("Finacial Analyisis");
+console.log(totalMonths);
+console.log("Total $" + totalProfitAndLoss);
+console.log("Greatest Increase in P/L:" + increaseMonth +" ($"+ (greatestIncrease*-1) +")")
+console.log(`Greatest decrease in P/L: ${decreaseMonth} ($${greatestDecrease*-1})`)
+// Variable to hold the change between 1 and 2nd month (Total/(Number of months - 1))
+var average = netChangeSum/(totalMonths - 1)
+
+console.log("Average Change: "+ average*-1)
 
 
 // Financial Analysis 
@@ -128,5 +145,3 @@ console.log(totalProfitAndLoss)
 // Average Change: -2315.12
 // Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 // Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-
-console.log(totalMonths);
