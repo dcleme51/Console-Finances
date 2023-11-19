@@ -130,8 +130,8 @@ for (let i = 0; i < finances.length; i++) {
 // Console logging the anwsers to meet the dervied outcomes. 
 
 console.log("Finacial Analyisis");
-console.log("Total Months " + totalMonths);
-console.log("Total $" + totalProfitAndLoss);
+console.log("Total Months: " + totalMonths);
+console.log("Total: $" + totalProfitAndLoss);
 
 // use operators to calculate th average change 
 var average = netChangeSum / (totalMonths - 1);
@@ -139,7 +139,7 @@ var average = netChangeSum / (totalMonths - 1);
 var newAvarage = average.toFixed(2) * -1;
 console.log("Average Change: " + newAvarage);
 
-console.log("Greatest Increase in P/L:" + increaseMonth + " ($" + (greatestIncrease * -1) + ")");
+console.log("Greatest Increase in P/L: " + increaseMonth + " ($" + (greatestIncrease * -1) + ")");
 
 console.log(`Greatest decrease in P/L: ${decreaseMonth} ($${greatestDecrease * -1})`);
 
