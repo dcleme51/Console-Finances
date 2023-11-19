@@ -2,9 +2,9 @@
 
 In this assignment we will be creating code for analyzing the financial records of a company. We have been provided with the financial dataset in the starter and index.js file.
 
-Installation In order to contribute to the task we must install Visual Studio Code. We would also need to intall an extention within Visual Studio Code to run and open a live server in the browser such as in 'chrome'. We will require a terminal/bash to create a repositary that will enable us to push the configured code base onto github. For this we will need to install Gitbash.
+Installation In order to contribute to the task we must install Visual Studio Code. We would also need to intall an extention within Visual Studio Code to run and open a live server in the browser such as in 'chrome' so we are able to see what apears within the console. We will require a terminal/bash to create a repositary that will enable us to push the code base onto github. For this we will need to install Gitbash as well.
 
-For this challenge we were provided with the starter codes for the html file and the JavaScript file with the data-set. We also had to achived the expected outcomes of the finacnial analysis data that was provided. In order to begin the process we had to problem solve how to get these outcomes. First, we psuedocoded what variables was needed. we then created the diffrent varables that we then utalisied with the dataset in order to workout each aspect. The below points were the accpetance criteria to meet and we fullfilled this by completing eash of these using a for loop and if statements and basic maths to derive the expected outcomes which we then console logged to display in the html console.
+For this challenge we were provided with the starter codes for the html file and the JavaScript file with the data-set. We also had to achive the expected outcomes of the finacnial analysis data that was provided. In order to begin the process we had to problem solve how to get these outcomes. First, we psudocoded to break down each point and what variables was needed. Then we created the diffrent varables which was utalisied with the dataset in order to workout each aspect. The below points were the accpetance criteria to meet and we fullfill this by completing eash of these. A for loop and if statements and basic maths to derive the expected outcomes which we then console logged to display in the html console.
 
 * The total number of months included in the dataset.
 
@@ -21,6 +21,6 @@ Reflection: As the first project within javascript it was quite diffcult to get 
 
 Resources: https://www.w3schools.com/js/default.asp
 
-Credits Instructer and TA's from the bootcamp AskBSC comminity members and special thanks to tutor Carlin Shaw for helping me across this challange. 
+Credits: Instructer and TA's from the bootcamp, AskBSC comminity members and special thanks to tutor Carlin Shaw for helping me across this challange. 
 
 Licence I have chosen to go with the MIT licence as it allows people to do almost anything to the project to help improve the website further if required. It is also a simple and persmissive im compaiesion to other licences.

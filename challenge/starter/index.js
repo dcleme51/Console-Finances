@@ -130,7 +130,7 @@ for (let i = 0; i < finances.length; i++) {
 // Console logging the anwsers to meet the dervied outcomes. 
 
 console.log("Finacial Analyisis");
-console.log(totalMonths);
+console.log("Total Months " + totalMonths);
 console.log("Total $" + totalProfitAndLoss);
 
 // use operators to calculate th average change 
